@@ -6,3 +6,6 @@
 1. NPM INSTALL
 2. NPM RUN SERVER
 3. NPM RUN SERVE
+
+# ABOUT PROJECT:
+Project is using bootstrap and swiper
