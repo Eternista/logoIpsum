@@ -38,6 +38,12 @@
     .l-sec--banner {
 
       margin-bottom: 220px;
+      @media all and (max-width: 1179px) {
+        margin-bottom: 110px;
+      }
+      @media all and (max-width: 767px) {
+        margin-bottom: 55px;
+      }
 
       picture {
         img {

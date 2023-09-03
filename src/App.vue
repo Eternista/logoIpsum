@@ -1,7 +1,7 @@
 <template>
   <Header />
   <main>
-    <BannerSection id="home" />
+    <BannerSection id="start" />
     <AboutSection id="about" />
     <GallerySection id="gallery" />
   </main>
@@ -45,18 +45,12 @@ export default {
   font-family: 'Montserrat', sans-serif;
 }
 
-#app {
-  overflow: hidden;
+#app, body, html {
+  overflow-x: hidden;
 }
 
 main {
   padding-top: 100px;
-}
-
-.container {
-  @media all and (min-width: 1480px) {
-    max-width: 1640px;
-  }
 }
 
 .title {
