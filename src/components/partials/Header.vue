@@ -32,7 +32,7 @@
             </div>
         </div>
     </header>
-    <nav :class="['navigation-mobile desktop-none', menuAct ? 'active' : '']">
+    <nav :class="['navigation-mobile desktop-none', menuAct ? 'active' : '']" @click="menuAct = !menuAct">
         <ul class="menu">
             <li class="menu__item"><a class="btn btn--mobile" href="#start">Start</a></li>
             <li class="menu__item"><a class="btn btn--mobile" href="#about">O Mnie</a></li>

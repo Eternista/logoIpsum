@@ -73,6 +73,17 @@ main {
     width: fit-content;
     margin: 0 auto 70px;
   }
+  @media all and (max-width: 1180px) {
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 30px;
+    .title__separator {
+      margin-top: 15px;
+    }
+    &.centred {
+      margin: 0 auto 45px;
+    }
+  }
 }
 
 

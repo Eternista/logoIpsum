@@ -41,6 +41,12 @@
   
         .l-sec--about {
             margin-bottom: 233.5px;
+            @media all and (max-width: 1179px) {
+                margin-bottom: 55px;
+            }
+            @media all and (max-width: 767px) {
+                margin-bottom: 0px;
+            }
             .row {
                 align-items: center;
             }
@@ -49,13 +55,36 @@
                 &--image {
                     max-width: 1090px;
                     width: 100%;
+                    @media all and (max-width: 1770px) {
+                        max-width: unset;
+                        width: 60%;
+                    }
+                    @media all and (max-width: 1500px) {
+                        width: 50%;
+                    }
                     img {
                         margin: 0 calc(-1 * var(--bs-gutter-x) * 0.5);
                         width: calc(100% + (2 * var(--bs-gutter-x) * 0.5));
+                        height: 613px;
+                        object-fit: cover;
+                    }
+                    @media all and (max-width: 1180px) {
+                        width: 100%;
+                        order: 1;
+                        img {
+                            height: 315px;
+                        }
                     }
                 }
                 &--text {
                     width: calc(100% - 1090px);
+                    @media all and (max-width: 1770px) {
+                        max-width: unset;
+                        width: 40%;
+                    }
+                    @media all and (max-width: 1500px) {
+                        width: 50%;
+                    }
                     .text-container {
                         max-width: 536px;
                         width: 100%;
@@ -68,6 +97,14 @@
                             letter-spacing: 0px;
                             color: #000000;
                             margin-bottom: 0;
+                        }
+                    }
+                    @media all and (max-width: 1180px) {
+                        width: 100%;
+                        order: 0;
+                        .text-container {
+                            max-width: 100%;
+                            padding: 0px 30px 55px;
                         }
                     }
                 }
