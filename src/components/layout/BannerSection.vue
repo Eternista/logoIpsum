@@ -1,5 +1,5 @@
 <template>
-  <section class="l-sec--banner">
+  <section class="l-sec l-sec--banner">
     <picture >
         <!-- DESKTOP IMAGE -->
         <source media="(min-width: 1180px)" :srcset="desktop" />
@@ -33,6 +33,9 @@
   <style lang="scss" scoped>
 
     .l-sec--banner {
+
+      margin-bottom: 220px;
+
       picture {
         img {
           max-width: 100%;
