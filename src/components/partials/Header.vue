@@ -57,6 +57,7 @@
         padding: 23px 0;
         border-bottom: 4px solid #FF4359;
         position: fixed;
+        z-index: 99;
         width: 100%;
         background-color: #fff;
         top: 0;

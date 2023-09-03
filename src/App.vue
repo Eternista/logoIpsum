@@ -45,6 +45,10 @@ export default {
   font-family: 'Montserrat', sans-serif;
 }
 
+#app {
+  overflow: hidden;
+}
+
 main {
   padding-top: 100px;
 }
@@ -73,7 +77,7 @@ main {
     text-align: center;
     display: block;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 70px;
   }
 }
 
