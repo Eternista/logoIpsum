@@ -1,7 +1,9 @@
 <template>
   <Header />
   <main>
-    <BannerSection />
+    <BannerSection id="home" />
+    <AboutSection id="about" />
+    <GallerySection id="gallery" />
   </main>
   <Footer />
 </template>
@@ -13,6 +15,8 @@ import Footer from './components/partials/Footer.vue';
 
 // BANNER
 import BannerSection from './components/layout/BannerSection.vue';
+import AboutSection from './components/layout/AboutSection.vue';
+import GallerySection from './components/layout/GallerySection.vue';
 
 
 import 'bootstrap/dist/css/bootstrap.css'
@@ -24,8 +28,10 @@ export default {
   components: {
     Header,
     Footer,
-    BannerSection
-  }
+    BannerSection,
+    AboutSection,
+    GallerySection
+}
 }
 </script>
 
@@ -39,9 +45,35 @@ export default {
   font-family: 'Montserrat', sans-serif;
 }
 
+main {
+  padding-top: 100px;
+}
+
 .container {
   @media all and (min-width: 1480px) {
     max-width: 1640px;
+  }
+}
+
+.title {
+  text-align: left;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 57px;
+  letter-spacing: 19.2px;
+  margin-bottom: 45px;
+  &__separator {
+    display: block;
+    margin-top: 30px;
+    background-color: #FF4359;
+    height: 2px;
+    width: 100%;
+  }
+  &.centred {
+    text-align: center;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
   }
 }
 

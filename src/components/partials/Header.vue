@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="container">
-            <div class="row">
+            <div class="row" v-if="mobileNavigation == false">
                 <div class="col col--menu">
                     <div class="col--menu__logo"><a href="#home"><img :src="logo" alt="logoIpsum"/></a></div>
                     <nav class="col--menu__nav">
@@ -25,6 +25,28 @@
                     </nav>
                 </div>
             </div>
+            <div class="row" v-if="mobileNavigation == true">
+                <div class="col col--mobile">
+                    <div class="col--mobile__logo"><a href="#home"><img :src="logo" alt="logoIpsum"/></a></div>
+                    <nav class="col--mobile__nav">
+                        <ul class="menu">
+                            <li class="menu__item"><a class="btn btn--mobile" href="#start">Start</a></li>
+                            <li class="menu__item"><a class="btn btn--mobile" href="#about">O Mnie</a></li>
+                            <li class="menu__item"><a class="btn btn--mobile" href="#galeria">Galeria</a></li>
+                            <li class="menu__item"><button class="btn btn--mobile" @click="showModal = true">Kontakt</button></li>
+                        </ul>
+                    </nav>
+                    <nav class="social-menu">
+                        <ul class="menu">
+                            <li :class="'menu__item social ' + 'social--' + item.alt" v-for="(item, index) in icons" :key="index">
+                                <a :href="item.url">
+                                    <img :src="item.src" :alt="item.alt"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
     </header>
     <Modal :showModal="showModal" @close-modal="showModal = false" />
@@ -32,8 +54,13 @@
 
 <style lang="scss">
     header {
-        padding: 26px 0;
-
+        padding: 23px 0;
+        border-bottom: 4px solid #FF4359;
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        top: 0;
+        left: 0;
         .container {
             .row {
                 justify-content: space-between;
@@ -135,17 +162,11 @@ import Youtube from '@/assets/youtube.svg';
                     url: "#",
                     alt: "youtube"
                 }
-            ]
+            ],
+            mobileNavigation: false
         };
         
     },
-    created() {
-        if(this.showModal) {
-            console.log('hey')
-        } else {
-            console.log('hey2')
-        }  
-    }
   }
   </script>
   

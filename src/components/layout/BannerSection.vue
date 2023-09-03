@@ -1,5 +1,5 @@
 <template>
-  <section class="l-sec l-sec--banner">
+  <section :id="id" class="l-sec l-sec--banner">
     <picture >
         <!-- DESKTOP IMAGE -->
         <source media="(min-width: 1180px)" :srcset="desktop" />
@@ -20,6 +20,9 @@
   import Mobile from '@/assets/banner/mobile.jpg';
 
   export default {
+    props: {
+      id: String
+    },
     data() {
       return {
         desktop: Desktop,

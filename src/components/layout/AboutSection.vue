@@ -1,5 +1,5 @@
 <template>
-    <section class="l-sec l-sec--about">
+    <section :id="id" class="l-sec l-sec--about">
         <div class="container-fluid">
             <div class="row">
                 <div class="col col--image">
@@ -26,6 +26,9 @@
     import AboutImage from "@/assets/about-me.jpg";
 
     export default {
+    props: {
+      id: String
+    },
       data() {
         return {
             image: AboutImage,
@@ -37,6 +40,7 @@
     <style lang="scss">
   
         .l-sec--about {
+            margin-bottom: 233.5px;
             .row {
                 align-items: center;
             }
