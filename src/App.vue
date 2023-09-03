@@ -1,36 +1,49 @@
 <template>
   <Header />
+  <main>
+    <BannerSection />
+  </main>
   <Footer />
 </template>
 
 <script>
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap/dist/js/bootstrap.js'
 import Header from './components/partials/Header.vue';
 import Footer from './components/partials/Footer.vue';
+
+// BANNER
+import BannerSection from './components/layout/BannerSection.vue';
+
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.js'
 
 
 export default {
   name: 'App',
   components: {
     Header,
-    Footer
+    Footer,
+    BannerSection
   }
 }
 </script>
 
-<style type="scss">
+<style lang="scss">
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+.container {
+  @media all and (min-width: 1480px) {
+    max-width: 1640px;
+  }
 }
+
+
 </style>
