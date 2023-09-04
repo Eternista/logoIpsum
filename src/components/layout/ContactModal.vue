@@ -65,9 +65,14 @@
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
-          }).then(() => {
-            console.log(data);
-        }).catch(err => {
+          }).then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        }).then(responseData => {
+            console.log(responseData);
+          }).catch(err => {
           console.log(err.message)
         })
 

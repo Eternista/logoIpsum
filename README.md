@@ -1,6 +1,5 @@
 # logoIpsum
 # NODE VERSION: 20.4.0
-# PHP VERSION: 8.2.0
 #
 # INSTALATION:
 1. NPM INSTALL
