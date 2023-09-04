@@ -1,0 +1,10 @@
+{
+    "contactRequest": [
+        {
+            "name": "test",
+            "surname": "example",
+            "email": "test@example.pl",
+            "check": true
+        }
+    ]
+}

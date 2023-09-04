@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51" height="50">
+  <g id="LOGO_Placeholder" transform="translate(-177 -26)">
+    <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(177 41)" fill="#fff" stroke="#ff4359" stroke-width="6">
+      <rect width="35" height="35" stroke="none"/>
+      <rect x="3" y="3" width="29" height="29" fill="none"/>
+    </g>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(197 26)" fill="#fff" stroke="#ff4359" stroke-width="6">
+      <circle cx="15" cy="15" r="15" stroke="none"/>
+      <circle cx="15" cy="15" r="12" fill="none"/>
+    </g>
+  </g>
+</svg>
